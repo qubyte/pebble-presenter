@@ -4,7 +4,7 @@ var ajax = require('ajax');
 var host;
 
 Pebble.addEventListener('showConfiguration', function(e) {
-  Pebble.openURL('http://pebble-config.herokuapp.com/config?title=Pebble%20Presenter%20Config&fields=host');
+  Pebble.openURL('https://pebble-config.herokuapp.com/config?title=Pebble%20Presenter%20Config&fields=host');
 });
 
 Pebble.addEventListener('webviewclosed', function(e) {
