@@ -4,7 +4,8 @@ var ajax = require('ajax');
 var host;
 
 Pebble.addEventListener('showConfiguration', function(e) {
-  Pebble.openURL('https://pebble-config.herokuapp.com/config?title=Pebble%20Presenter%20Config&fields=host');
+  // TODO - This only works over HTTP. A much simpler config site can be made and hosted on github pages.
+  Pebble.openURL('https://qubyte.github.io/pebble-presenter/');
 });
 
 Pebble.addEventListener('webviewclosed', function(e) {
