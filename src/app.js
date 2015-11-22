@@ -1,15 +1,15 @@
 var UI = require('ui');
 var Vibe = require('ui/vibe');
 var ajax = require('ajax');
-var host;
+var host = localStorage.getItem('host');
 
-Pebble.addEventListener('showConfiguration', function(e) {
-  // TODO - This only works over HTTP. A much simpler config site can be made and hosted on github pages.
+Pebble.addEventListener('showConfiguration', function (e) {
   Pebble.openURL('https://qubyte.github.io/pebble-presenter/');
 });
 
-Pebble.addEventListener('webviewclosed', function(e) {
+Pebble.addEventListener('webviewclosed', function (e) {
   host = JSON.parse(decodeURIComponent(e.response)).host;
+  localStorage.setItem('host', host);
 });
 
 function navigate(by) {
